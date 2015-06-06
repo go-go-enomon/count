@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var count : Int = 0
+    var number : Int = 0
     @IBOutlet var label : UILabel!
     
     override func viewDidLoad() {
@@ -21,9 +21,16 @@ class ViewController: UIViewController {
     
     @IBAction func plus(){
     
-    count = count + 1
+    number = number + 1
         
-    label.text = String(count)
+        if number >= 5 && number < 10 {
+            label.textColor = UIColor.orangeColor()
+        }else if number >= 10 {
+            label.textColor = UIColor.blueColor()
+        }
+        
+        
+    label.text = String(number)
     
     }
 
